@@ -2,12 +2,12 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class StorageLocationTest {
-	Customer waSeattleCust1;
-	String waSeattleDesignation = "WA02Seattle";
+	String waSeattleCustName1 = "Test Name",
+		waSeattleCustPhone1 = "7778889999",
+		waSeattleDesignation = "WA02Seattle";
 	Double basePrice = 20.0;
-	String waSeattleCustName1 = "Test Name";
-	String waSeattleCustPhone1 = "7778889999";
 	
+	Customer waSeattleCust1;
 	StorageLocation waSeattle = new StorageLocation(waSeattleDesignation, basePrice);
 
 	@Test

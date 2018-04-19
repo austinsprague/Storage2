@@ -3,18 +3,16 @@ import java.time.LocalDate;
 import org.junit.Test;
 
 public class UnitHumidityTest{	
-	String name = "Test name";
-	String phoneNum = "1234567890";
-	
-	String waSeattleDesignation = "WA02Seattle";
-	int width = 5;
-	int length = 10;
-	int height = 10;
+	String name = "Test name",
+		phoneNum = "1234567890",
+		waSeattleDesignation = "WA02Seattle";
+	int width = 5,
+		length = 10,
+		height = 10;
 	double locPrice = 20.0;
 
 	StorageLocation waSeattle = new StorageLocation(waSeattleDesignation, locPrice);
 	UnitHumidity humUnit = new UnitHumidity(width, length, height, locPrice);
-
 	Customer customer = new Customer(name, phoneNum);
 	
 	@Test
@@ -22,7 +20,7 @@ public class UnitHumidityTest{
 		assertEquals(locPrice, waSeattle.getBasePrice(), 0.00001);
 		assertEquals(length, humUnit.getUnitLength());
 		assertEquals(height, humUnit.getUnitHeight());
-		assertEquals(height, humUnit.getUnitHeight());
+		assertEquals(width, humUnit.getUnitWidth());
 		assertEquals(0.0, humUnit.getHumidityLevel(), 0.0001);
 	}
 	

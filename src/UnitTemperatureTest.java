@@ -3,13 +3,13 @@ import java.time.LocalDate;
 import org.junit.Test;
 
 public class UnitTemperatureTest{	
-	String name = "Test name";
-	String phoneNum = "1234567890";
+	String name = "Test name",
+		phoneNum = "1234567890",
+		waSeattleDesignation = "WA02Seattle";
 	
-	String waSeattleDesignation = "WA02Seattle";
-	int width = 5;
-	int length = 10;
-	int height = 10;
+	int width = 5, 
+		length = 10, 
+		height = 10;
 	double locPrice = 20.0;
 
 	StorageLocation waSeattle = new StorageLocation(waSeattleDesignation, locPrice);
@@ -21,7 +21,7 @@ public class UnitTemperatureTest{
 		assertEquals(locPrice, waSeattle.getBasePrice(), 0.00001);
 		assertEquals(length, TempUnit.getUnitLength());
 		assertEquals(height, TempUnit.getUnitHeight());
-		assertEquals(height, TempUnit.getUnitHeight());
+		assertEquals(width, TempUnit.getUnitWidth());
 	}
 	
 	@Test
